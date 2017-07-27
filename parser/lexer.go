@@ -207,7 +207,7 @@ func (s *Scanner) scan() (tok int, pos Pos, lit string) {
 
 	if ch0 == '\\' {
 		s.r.inc()
-		ch1 := s.r.peek
+		ch1 := s.r.peek()
 		if ch1 == 'N' {
 			return null, pos, "\\N"
 		}
